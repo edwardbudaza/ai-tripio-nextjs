@@ -10,7 +10,7 @@ function Hero() {
             <span className="bg-gradient-to-bl from-yellow-500 via-purple-500 to-blue-500 inline-block text-transparent bg-clip-text">  
                 Unlock Your Dream Journey with AI: 
             </span>
-            Cusom Plans in Seconds
+            Custom Plans in Seconds
         </h1>
         <p className="text-xl text-gray-500 text-center">
             Your ultimate travel curator and trip planner, crafting bespoke itineraries perfectly aligned with your interests and budget.

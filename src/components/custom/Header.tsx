@@ -14,7 +14,12 @@ const Header: FC = () => {
       <Link href="/" passHref>
         <Image src="/logo.svg" width={150} height={150} style={{ cursor: "pointer" }} alt="Logo" />
       </Link>
-      <div>
+      <div className="flex items-center justify-between gap-2">
+        <Link href="/blog">
+          <Button className="rounded-lg">
+            Blog
+          </Button>
+        </Link>
         {user ? (
           <div className="flex items-center gap-3">
             <Link href="/create-trip" passHref>
