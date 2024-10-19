@@ -6,6 +6,7 @@ export const POSTS_QUERY =
   defineQuery(`*[_type == "post" && defined(slug.current)][0...12]{
     _id, 
     title, 
+    description,
     slug, 
     mainImage, 
     _createdAt, 
@@ -14,5 +15,7 @@ export const POSTS_QUERY =
 
 export const POST_QUERY =
   defineQuery(`*[_type == "post" && slug.current == $slug][0]{
-  title, body, mainImage
+  ...,
+  author->,
+  categories[]->
 }`);

@@ -1,6 +1,6 @@
 // ./src/app/(blog)/page.tsx
 
-import { Posts } from "../_components/Posts";
+import { BlogList } from "../_components/BlogList";
 import { sanityFetch } from "@/sanity/lib/client";
 import { POSTS_QUERY } from "@/sanity/lib/queries";
 
@@ -9,5 +9,5 @@ export default async function Page() {
     query: POSTS_QUERY,
   });
 
-  return <Posts posts={posts} />;
+  return <BlogList posts={posts} />;
 }

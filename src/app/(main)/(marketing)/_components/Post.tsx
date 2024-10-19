@@ -11,7 +11,7 @@ export function Post({ post }: { post: POST_QUERYResult }) {
   const { title, mainImage, body } = post || {};
 
   return (
-    <main className="container mx-auto prose prose-lg p-4">
+    <main className="container mx-auto max-w-6xl">
       {title ? <h1>{title}</h1> : null}
       {mainImage?.asset?._ref ? (
         <Image
@@ -24,7 +24,7 @@ export function Post({ post }: { post: POST_QUERYResult }) {
       ) : null}
       {body ? <PortableText value={body} /> : null}
       <hr />
-      <Link href="/">&larr; Return home</Link>
+      <Link href="/blog">&larr; Return to Articles</Link>
     </main>
   );
 }

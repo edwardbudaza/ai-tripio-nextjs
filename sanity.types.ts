@@ -284,6 +284,7 @@ export declare const internalGroqTypeReferenceTo: unique symbol;
 // Variable: POSTS_QUERY
 // Query: *[_type == "post" && defined(slug.current)][0...12]{    _id,     title,     slug,     mainImage,     _createdAt,     "categories": categories[]->{title, slug}   }
 export type POSTS_QUERYResult = Array<{
+  descreption: ReactI18NextChildren | Iterable<ReactI18NextChildren>;
   _id: string;
   title: string | null;
   slug: Slug | null;
