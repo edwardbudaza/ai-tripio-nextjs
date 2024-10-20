@@ -6,6 +6,7 @@ import { NextRequest, NextResponse } from "next/server";
 
 import { client } from "@/sanity/lib/client";
 import { token } from "@/sanity/lib/token";
+import { ROUTES } from "@/constants/routes";
 
 const clientWithToken = client.withConfig({ token });
 
@@ -16,7 +17,7 @@ export async function GET(request: NextRequest) {
     });
   }
 
-  const { isValid, redirectTo = "/blog" } = await validatePreviewUrl(
+  const { isValid, redirectTo = `${ROUTES.blog}` } = await validatePreviewUrl(
     clientWithToken,
     request.url
   );

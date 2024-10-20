@@ -1,6 +1,7 @@
 
 import { Suspense } from 'react';
 import { notFound } from 'next/navigation';
+
 import { getTripData } from '@/services/firestoreService';
 import LoadingSpinner from '@/components/custom/LoadingSpinner';
 import InfoSection from '../../_components/InfoSection';

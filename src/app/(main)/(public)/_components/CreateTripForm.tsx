@@ -1,17 +1,19 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { SelectBudgetOptions, SelectTravelesList } from "@/constants/options";
-import { cn } from "@/lib/utils";
 import { SignInButton, useUser } from "@clerk/nextjs";
 import { Loader2 } from "lucide-react";
 import dynamic from "next/dynamic";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { toast } from "sonner";
+
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { SelectBudgetOptions, SelectTravelesList } from "@/constants/options";
+import { cn } from "@/lib/utils";
 import { saveTripToFirestore } from "@/services/firestoreService";
 import { getUserData } from "@/lib/userUtils";
+import { ROUTES } from "@/constants/routes";
 
 
 const GooglePlacesAutocomplete = dynamic(() => import('react-google-places-autocomplete'), { ssr: false });
@@ -79,7 +81,7 @@ export default function CreateTripForm() {
         formData
       );
       
-      router.push(`/view-trip/${tripId}`);
+      router.push(`${ROUTES.viewTrip}/${tripId}`);
 
       
     } catch (error) {
@@ -158,7 +160,7 @@ export default function CreateTripForm() {
         {isLoaded && !user ? (
           <SignInButton
             mode="modal"
-            forceRedirectUrl={"/create-trip"} // Ensures the user is redirected to /create-trip after signing in
+            forceRedirectUrl={ROUTES.createTrip} // Ensures the user is redirected to /create-trip after signing in
           >
             <Button>
               Sign In to Generate Trip

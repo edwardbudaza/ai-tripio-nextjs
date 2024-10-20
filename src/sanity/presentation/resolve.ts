@@ -1,5 +1,6 @@
 // ./src/sanity/presentation/resolve.ts
 
+import { ROUTES } from "@/constants/routes";
 import {
   defineLocations,
   PresentationPluginOptions,
@@ -17,9 +18,9 @@ export const resolve: PresentationPluginOptions["resolve"] = {
         locations: [
           {
             title: doc?.title || "Untitled",
-            href: `/blog/posts/${doc?.slug}`,
+            href: `${ROUTES.blog}/post/${doc?.slug}`,
           },
-          { title: "Home", href: `/blog` },
+          { title: "Home", href: `${ROUTES.blog}` },
         ],
       }),
     }),

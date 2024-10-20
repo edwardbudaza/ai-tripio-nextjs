@@ -26,12 +26,18 @@ dependencies:
   '@radix-ui/react-slot':
     specifier: ^1.1.0
     version: 1.1.0(@types/react@18.3.11)(react@18.3.1)
+  '@sanity/client':
+    specifier: ^6.22.2
+    version: 6.22.2(debug@4.3.7)
   '@sanity/icons':
     specifier: ^3.4.0
     version: 3.4.0(react@18.3.1)
   '@sanity/image-url':
     specifier: ^1.0.2
     version: 1.0.2
+  '@sanity/preview-url-secret':
+    specifier: ^1.6.21
+    version: 1.6.21(@sanity/client@6.22.2)
   '@sanity/vision':
     specifier: ^3.61.0
     version: 3.61.0(@babel/runtime@7.25.7)(@codemirror/lint@6.8.2)(@codemirror/theme-one-dark@6.1.2)(@lezer/common@1.2.3)(codemirror@6.0.1)(react-dom@18.3.1)(react-is@18.3.1)(react@18.3.1)(styled-components@6.1.13)
@@ -5492,7 +5498,7 @@ packages:
     resolution: {integrity: sha512-Kv5nKlh6yRrdrGvxeJ2e5y2eRUpkUosIW4A2AS38zwSz27zu7ufDwQPi5Jhs3XAlGNetl3bmnGhQsMtkKJnj3w==}
     dependencies:
       no-case: 3.0.4
-      tslib: 2.4.1
+      tslib: 2.8.0
     dev: false
 
   /dot-prop@5.3.0:
@@ -7481,7 +7487,7 @@ packages:
   /lower-case@2.0.2:
     resolution: {integrity: sha512-7fm3l3NAF9WfN6W3JOmf5drwpVqX78JtoGJ3A6W0a6ZnldM41w2fV5D490psKFTpMds8TJse/eHLFFsNHHjHgg==}
     dependencies:
-      tslib: 2.4.1
+      tslib: 2.8.0
     dev: false
 
   /lru-cache@10.4.3:
@@ -7829,7 +7835,7 @@ packages:
     resolution: {integrity: sha512-fgAN3jGAh+RoxUGZHTSOLJIqUc2wmoBwGR4tbpNAKmmovFoWq0OdRkb0VkldReO2a2iBT/OEulG9XSUc10r3zg==}
     dependencies:
       lower-case: 2.0.2
-      tslib: 2.4.1
+      tslib: 2.8.0
     dev: false
 
   /node-html-parser@6.1.13:
@@ -9327,7 +9333,7 @@ packages:
     resolution: {integrity: sha512-LAOh4z89bGQvl9pFfNF8V146i7o7/CqFPbqzYgP+yYzDIDeS9HaNFtXABamRW+AQzEVODcvE79ljJ+8a9YSdMg==}
     dependencies:
       dot-case: 3.0.4
-      tslib: 2.4.1
+      tslib: 2.8.0
     dev: false
 
   /snakecase-keys@5.4.4:

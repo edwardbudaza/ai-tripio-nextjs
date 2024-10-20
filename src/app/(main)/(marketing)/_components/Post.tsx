@@ -6,6 +6,7 @@ import { PortableText } from "@portabletext/react";
 import { urlFor } from "@/sanity/lib/image";
 import { POST_QUERYResult } from "../../../../../sanity.types";
 import Link from "next/link";
+import { ROUTES } from "@/constants/routes";
 
 export function Post({ post }: { post: POST_QUERYResult }) {
   const { title, mainImage, body } = post || {};
@@ -24,7 +25,7 @@ export function Post({ post }: { post: POST_QUERYResult }) {
       ) : null}
       {body ? <PortableText value={body} /> : null}
       <hr />
-      <Link href="/blog">&larr; Return to Articles</Link>
+      <Link href={ROUTES.blog}> Return to Articles</Link>
     </main>
   );
 }

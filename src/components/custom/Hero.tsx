@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { Button } from "../ui/button";
+import { ROUTES } from "@/constants/routes";
 
 function Hero() {
   return (
@@ -16,7 +17,7 @@ function Hero() {
             Your ultimate travel curator and trip planner, crafting bespoke itineraries perfectly aligned with your interests and budget.
         </p>
 
-        <Link href={"/create-trip"} passHref>
+        <Link href={ROUTES.createTrip} passHref>
             <Button>Get Started, It&apos;s Free</Button>
         </Link>
         
