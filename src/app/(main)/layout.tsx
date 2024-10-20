@@ -4,6 +4,8 @@ import {
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Toaster } from "sonner";
+import { Analytics } from "@vercel/analytics/react"
+
 import "../globals.css";
 import Header from '@/components/custom/Header';
 
