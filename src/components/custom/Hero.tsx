@@ -17,7 +17,7 @@ function Hero() {
         </p>
 
         <Link href={"/create-trip"} passHref>
-            <Button>Get Started, It's Free</Button>
+            <Button>Get Started, It&apos;s Free</Button>
         </Link>
         
         <Image
