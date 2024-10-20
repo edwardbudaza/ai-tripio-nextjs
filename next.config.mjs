@@ -2,8 +2,15 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['lh3.googleusercontent.com', "places.googleapis.com", "cdn.sanity.io"], // Add any other domains you need
     remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "lh3.googleusercontent.com",
+      },
+      {
+        protocol: "https",
+        hostname: "places.googleapis.com",
+      },
       {
         protocol: "https",
         hostname: "cdn.sanity.io",
@@ -11,7 +18,7 @@ const nextConfig = {
     ],
   },
   env: {
-    NEXT_PUBLIC_GOOGLE_PLACE_API_KEY: process.env.GOOGLE_PLACE_API_KEY,
+    NEXT_PUBLIC_GOOGLE_PLACE_API_KEY: process.env.NEXT_PUBLIC_GOOGLE_PLACE_API_KEY,
   },
 }
 

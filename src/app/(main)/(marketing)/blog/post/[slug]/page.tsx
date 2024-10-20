@@ -1,11 +1,13 @@
 import Image from "next/image";
 import { Key, ReactElement, JSXElementConstructor, ReactNode, ReactPortal, AwaitedReactNode } from "react";
 import {PortableText} from '@portabletext/react';
+import { defineQuery, groq } from "next-sanity";
 
 import { sanityFetch } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
 import { POST_QUERY } from "@/sanity/lib/queries";
 import { RichTextComponents } from "../../../_components/RichTextComponents";
+import { client } from "@/lib/sanity.client";
 
   
 
@@ -13,6 +15,21 @@ type Props = {
   params: {
     slug: string;
   };
+};
+
+export const revalidate = 1800 // revalidate this page every 30 minutes
+
+export async function generateStaticParams() {
+  const query = groq`*[_type == "post"]{
+    slug
+  }`;
+
+  const slugs: Post[] = await client.fetch(query);
+  const slugRoutes = slugs.map((slug) => slug.slug.current);
+
+  return slugRoutes.map((slug) => ({
+    slug,
+  }));
 };
 
 async function PostPage({params: {slug}}: Props) {
