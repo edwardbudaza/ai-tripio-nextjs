@@ -19,8 +19,8 @@ if (typeof projectId !== "string" || typeof dataset !== "string") {
   throw new Error("Invalid projectId or dataset. They must be strings.");
 }
 
-export const usePreview = definePreview({
-  projectId,
-  dataset,
-  onPublicAccessOnly,
-});
+// export const usePreview = definePreview({
+//   projectId,
+//   dataset,
+//   onPublicAccessOnly,
+// });

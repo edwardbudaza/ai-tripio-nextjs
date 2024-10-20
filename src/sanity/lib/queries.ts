@@ -10,7 +10,9 @@ export const POSTS_QUERY =
     slug, 
     mainImage, 
     _createdAt, 
-    "categories": categories[]->{title, slug} 
+    "categories": categories[]->{title, slug},
+    "author": author->{name, image, slug}, // Fetch author details
+    body // Fetch body content
   }`);
 
 export const POST_QUERY =

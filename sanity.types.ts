@@ -75,6 +75,7 @@ export type Post = {
   _updatedAt: string;
   _rev: string;
   title?: string;
+  description?: string;
   slug?: Slug;
   author?: {
     _ref: string;
@@ -286,7 +287,7 @@ export declare const internalGroqTypeReferenceTo: unique symbol;
 export type POSTS_QUERYResult = Array<{
   _id: string;
   title: string | null;
-  description: null;
+  description: string | null;
   slug: Slug | null;
   mainImage: {
     asset?: {
@@ -315,6 +316,7 @@ export type POST_QUERYResult = {
   _updatedAt: string;
   _rev: string;
   title?: string;
+  description?: string;
   slug?: Slug;
   author: {
     _id: string;
