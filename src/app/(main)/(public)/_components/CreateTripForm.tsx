@@ -12,7 +12,7 @@ import { Input } from "@/components/ui/input";
 import { SelectBudgetOptions, SelectTravelesList } from "@/constants/options";
 import { cn } from "@/lib/utils";
 import { saveTripToFirestore } from "@/services/firestoreService";
-import { getUserData } from "@/lib/userUtils";
+import { useUserData } from "@/lib/useUserData";
 import { ROUTES } from "@/constants/routes";
 
 
@@ -23,7 +23,7 @@ export default function CreateTripForm() {
   const [loading, setLoading] = useState(false);
   const router = useRouter();
   const { user, isLoaded } = useUser();
-  const userData = getUserData();
+  const userData = useUserData();
 
   useEffect(() => {
     // On component mount, try to restore the form data from local storage

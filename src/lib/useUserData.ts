@@ -1,6 +1,6 @@
 import { useUser } from "@clerk/nextjs";
 
-export const getUserData = () => {
+export const useUserData = () => {
     const { user, isLoaded } = useUser();
     
     if (!isLoaded || !user) return null;
